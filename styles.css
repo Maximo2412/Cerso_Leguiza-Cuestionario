@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -102,4 +103,123 @@ h1 {
     text-align: center;
     color: #2c3e50;
     margin-bottom: 30px;
+}
+
+.ranking-container {
+    margin: 30px 0;
+}
+
+.ranking-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-top: 30px;
+}
+
+.ranking-section h3 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.tabla-ranking {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tabla-ranking th {
+    background-color: #3498db;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tabla-ranking td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.tabla-ranking tr:hover {
+    background-color: #f8f9fa;
+}
+
+.tabla-ranking tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.results-container {
+    margin-bottom: 30px;
+}
+
+.result-message {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.result-message.excellent {
+    background-color: #d4edda;
+    border: 2px solid #c3e6cb;
+    color: #155724;
+}
+
+.result-message.good {
+    background-color: #fff3cd;
+    border: 2px solid #ffeaa7;
+    color: #856404;
+}
+
+.result-message.needs-improvement {
+    background-color: #f8d7da;
+    border: 2px solid #f5c6cb;
+    color: #721c24;
+}
+
+.score-display {
+    margin-top: 15px;
+}
+
+.score-display p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.score-display span {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.home-btn {
+    background-color: #e74c3c;
+}
+
+.home-btn:hover {
+    background-color: #c0392b;
 }
