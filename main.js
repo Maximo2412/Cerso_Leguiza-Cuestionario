@@ -89,7 +89,7 @@ function mostrarRanking() {
     
     let html = `
         <div class="ranking-section">
-            <h3>🏆 Ranking de Jugadores</h3>
+            <h3> Ranking de Jugadores</h3>
             <table class="tabla-ranking">
                 <thead>
                     <tr>
@@ -160,3 +160,4 @@ function displayResults(results, container) {
         </div>
     `;
 }
+
