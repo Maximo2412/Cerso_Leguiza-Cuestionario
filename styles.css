@@ -103,21 +103,3 @@ h1 {
     color: #2c3e50;
     margin-bottom: 30px;
 }
-
-@media (max-width: 600px) {
-    .container {
-        padding: 10px;
-    }
-    
-    .introduccion h1 {
-        font-size: 2em;
-    }
-    
-    .introduccion h2 {
-        font-size: 1.5em;
-    }
-    
-    fieldset {
-        padding: 15px;
-    }
-}
