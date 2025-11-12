@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     showStoredResults();
+    mostrarRanking(); 
 });
 
 function calculateScore() {
@@ -45,7 +46,80 @@ function calculateScore() {
     };
     
     localStorage.setItem('quizResults', JSON.stringify(results));
+    
+    guardarEnRanking(score);
+}
+
+function guardarEnRanking(puntaje) {
+    let nombreJugador = prompt("¡Felicidades! Ingresa tu nombre para el ranking:");
+    
+    if (!nombreJugador || nombreJugador.trim() === "") {
+        nombreJugador = "Anónimo";
+    }
+    
+    let ranking = JSON.parse(localStorage.getItem("ranking")) || [];
+    
+    ranking.push({
+        nombre: nombreJugador,
+        puntaje: puntaje,
+        fecha: new Date().toLocaleDateString()
+    });
+    
+    ranking.sort((a, b) => b.puntaje - a.puntaje);
+    
+    if (ranking.length > 10) {
+        ranking = ranking.slice(0, 10);
+    }
+    
+    localStorage.setItem("ranking", JSON.stringify(ranking));
+    
     window.location.href = 'Resultado.html';
+}
+
+function mostrarRanking() {
+    const rankingContainer = document.getElementById('ranking-container');
+    if (!rankingContainer) return;
+    
+    const ranking = JSON.parse(localStorage.getItem("ranking")) || [];
+    
+    if (ranking.length === 0) {
+        rankingContainer.innerHTML = "<p>No hay resultados en el ranking aún</p>";
+        return;
+    }
+    
+    let html = `
+        <div class="ranking-section">
+            <h3>🏆 Ranking de Jugadores</h3>
+            <table class="tabla-ranking">
+                <thead>
+                    <tr>
+                        <th>Posición</th>
+                        <th>Jugador</th>
+                        <th>Puntaje</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+    `;
+    
+    ranking.forEach((jugador, index) => {
+        let emoji = '';
+        if (index === 0) emoji = 'Campeon ';
+        else if (index === 1) emoji = 'Sub-Campeon ';
+        else if (index === 2) emoji = 'Tercer Puesto ';
+        
+        html += `
+            <tr>
+                <td>${emoji} ${index + 1}°</td>
+                <td>${jugador.nombre}</td>
+                <td>${jugador.puntaje}/10</td>
+                <td>${jugador.fecha}</td>
+            </tr>
+        `;
+    });
+    
+    html += `</tbody></table></div>`;
+    rankingContainer.innerHTML = html;
 }
 
 function showStoredResults() {
