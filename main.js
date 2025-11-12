@@ -77,7 +77,7 @@ function guardarEnRanking(puntaje) {
 }
 
 function mostrarRanking() {
-    const rankingContainer = document.getElementById('ranking-container');
+    const rankingContainer = document.getElementById('rankig-container');
     if (!rankingContainer) return;
     
     const ranking = JSON.parse(localStorage.getItem("ranking")) || [];
@@ -160,4 +160,5 @@ function displayResults(results, container) {
         </div>
     `;
 }
+
 
