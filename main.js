@@ -5,12 +5,11 @@ const correctAnswers = {
     p4: 'a', // Capa de Red
     p5: 'a', // Transmisión de bits a través del medio
     p6: 'c', // Capa de Aplicación
-    p7: 'b', // Router
+    p7: 'c', //un protocolo de plataformas de intercambio de criptomonedas, que permiten comprar y vender activos digitales, o al servicio de correo electrónico empresarial de Microsoft, que ofrece gestión de correos, calendarios y contactos
     p8: 'a', // Capa de Presentación
     p9: 'd', // TCP
     p10: 'a', // Capa de Sesión
-    p11: 'c' //un protocolo de plataformas de intercambio de criptomonedas, que permiten comprar y vender activos digitales, o al servicio de correo electrónico empresarial de Microsoft, que ofrece gestión de correos, calendarios y contactos
-};
+    };
 
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('quiz-form');
@@ -161,6 +160,7 @@ function displayResults(results, container) {
         </div>
     `;
 }
+
 
 
 
