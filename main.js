@@ -7,7 +7,7 @@ const correctAnswers = {
     p6: 'c', // Capa de Aplicación
     p7: 'c', //un protocolo de plataformas de intercambio de criptomonedas, que permiten comprar y vender activos digitales, o al servicio de correo electrónico empresarial de Microsoft, que ofrece gestión de correos, calendarios y contactos
     p8: 'a', // Capa de Presentación
-    p9: 'd', // TCP
+    p9: 'd', // Seguridad de la Capa de Transporte (TLS)
     p10: 'a', // Capa de Sesión
     };
 
@@ -160,6 +160,7 @@ function displayResults(results, container) {
         </div>
     `;
 }
+
 
 
 
